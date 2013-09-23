@@ -1,0 +1,34 @@
+from .base import *  # noqa
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+        'TEST_NAME': ''
+    }
+}
+
+INSTALLED_APPS += (
+    'test_extensions',
+    'django_nose',
+)
+
+TEST_RUNNER = 'vincent.core.runner.NoseTestSuiteRunner'
+
+WAFFLE_DEFAULT = True
+WAFFLE_FLAG_DEFAULT = True
+WAFFLE_SWITCH_DEFAULT = True
+WAFFLE_SAMPLE_DEFAULT = True
+
+TEST_FIXTURES = True
+
+PIPELINE = False
+
+SOUTH_TESTS_MIGRATE = False
+
+STATICFILES_STORAGE = 'pipeline.storage.NonPackagingPipelineStorage'

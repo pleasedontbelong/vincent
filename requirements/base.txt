@@ -1,0 +1,53 @@
+-e git://github.com/disqus/django-db-utils.git@b4b6872804d297cf3485ec8ca7cf97068e7c344e#egg=django_db_utils-dev
+-e git://github.com/jbalogh/django-cache-machine.git@ace04f83516cbce88007b27edf3027b31502bddb#egg=django_cache_machine-dev
+-e git://github.com/jsocol/django-waffle.git@b836066dc729634892b8c8db73b7e4ee81977b01#egg=django_waffle-dev
+-e git://github.com/playfire/django-append-url-to-sql.git@f41e642d89d2a89258f3624f7b3268c8cc79fca1#egg=django_append_url_to_sql-dev
+-e git://github.com/sem-io/Impostor.git@1e8546623825a75e7530f2b3d3b5c00b04deb98b#egg=Impostor-dev
+amqp==1.0.13
+anyjson==0.3.3
+argparse==1.2.1
+billiard==2.7.3.32
+bleach==1.2.1
+boto==2.8.0
+celery==3.0.23
+django-app-metrics==0.9.0
+django-braces==1.0.0
+django-celery==3.0.23
+django-crispy-forms==1.2.3
+django-extensions==0.9
+django-hosts==0.5
+django-le-social==0.7
+django-mail-factory==0.3
+django-model-utils==0.4.0
+django-pipeline==1.3.6
+django-redis-cache==0.9.7
+django-redis-sessions-fork==0.5.2
+django-rq==0.4.5
+django-secure==0.1.2
+django-social-auth==0.7.20
+django-storages==1.1.6
+Django==1.5
+dogslow==0.9.5
+Fabric==1.6.0
+futures==2.1.4
+hiredis==0.1.1
+html5lib==1.0b3
+httplib2==0.8
+kombu==2.5.14
+mock==1.0.1
+oauth2==1.5.211
+paramiko==1.11.1
+Pillow==1.7.8
+psycopg2==2.4.6
+pycrypto==2.6
+python-dateutil==2.1
+python-openid==2.2.5
+pytz==2012j
+raven==3.1.17
+redis==2.7.2
+rq==0.3.11
+six==1.4.1
+sorl-thumbnail==11.12
+South==0.7.6
+times==0.6.2
+wsgiref==0.1.2

@@ -1,0 +1,62 @@
+from .base import *
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': ''
+    }
+}
+
+PARENT_HOST = "localhost:8000"
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+DEBUG = True
+
+TEMPLATE_DEBUG = True
+
+THUMBNAIL_DEBUG = True
+
+MIDDLEWARE_CLASSES += (
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+)
+
+INSTALLED_APPS += (
+    'debug_toolbar',
+)
+
+DEBUG_TOOLBAR_PANELS = (
+    'debug_toolbar.panels.version.VersionDebugPanel',
+    'debug_toolbar.panels.timer.TimerDebugPanel',
+    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
+    'debug_toolbar.panels.headers.HeaderDebugPanel',
+    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
+    'debug_toolbar.panels.sql.SQLDebugPanel',
+    'debug_toolbar.panels.template.TemplateDebugPanel',
+    'debug_toolbar.panels.cache.CacheDebugPanel',
+    'debug_toolbar.panels.signals.SignalDebugPanel',
+    'debug_toolbar.panels.logger.LoggingPanel',
+)
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+}
+
+
+def show_toolbar(request):
+    return True
+
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+    'SHOW_TOOLBAR_CALLBACK': show_toolbar,
+    'HIDE_DJANGO_SQL': False,
+    'DEBUG_TOOLBAR_MEDIA_URL': '/usr/local/lib/python2.6/dist-packages/django_debug_toolbar-0.8.5-py2.6.egg/debug_toolbar/media'
+}
+
+BROKER_URL = "redis://localhost:6379/2"
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/2'

@@ -1,0 +1,15 @@
+-r base.txt
+
+## Easy debugging
+django-debug-toolbar
+
+## Test runner utilities
+django-test-utils
+django-test-extensions
+django-devserver
+flake8
+nose
+glue==0.3
+django-nose
+coverage
+Werkzeug
